@@ -14,9 +14,7 @@ def alg(i):
 	rot={(1,1):[[-1,1],[1,-1]],(-1,1):[[-1,-1],[1,1]],(-1,-1):[[1,-1],[-1,1]],(1,-1):[[1,1],[-1,-1]]}
 	d,_=i.split("\n")[0].split(" ")
 	pl=[[int(n.split(" ")[0]),int(n.split(" ")[1])] for n in i.split("\n")[1:]]
-	o=[]
-	for k in pl:
-		o+=["0"]
+	o=["0" for _ in range(0,len(pl))]
 	if (int(d)==0):
 		return "\n".join(o)
 	c="0"+rec(int(d))
